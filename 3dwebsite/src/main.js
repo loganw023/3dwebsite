@@ -43,7 +43,7 @@ function addStar() {
 }
 
 const loader = new THREE.TextureLoader()
-const earthTexture = loader.load('/earth2.jpg')
+const earthTexture = loader.load('/earth.jpg')
 
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(6, 64, 64), 
