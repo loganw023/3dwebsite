@@ -42,7 +42,8 @@ function addStar() {
   scene.add(star)
 }
 
-const earthTexture = new THREE.TextureLoader().load('public/earth2.jpg');
+const loader = new THREE.TextureLoader()
+const earthTexture = loader.load('/earth2.jpg')
 
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(6, 64, 64), 
@@ -58,7 +59,7 @@ scene.add(earth)
 
 Array(200).fill().forEach(addStar)
 
-const spaceTexture = new THREE.TextureLoader().load('public/space.jpg');
+const spaceTexture = loader.load('/space.jpg')
 scene.background = spaceTexture;
 
 function moveCamera() {
